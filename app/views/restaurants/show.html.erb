@@ -1,0 +1,12 @@
+<h1>This is the restaurant you chose, Raj!</h1>
+
+  <h3><%= @restaurant.name %></h3>
+  <%= link_to restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you sure?"} do %>
+    <i class="fas fa-trash-alt"></i>
+  <% end %>
+  <p><%= @restaurant.name %></p>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.category %></p>
+
+  <h3><%= link_to "Update this restaurant", edit_restaurant_path(@restaurant.id) %></h3>
+  <h3><%= link_to "Go back to your restaurants", restaurants_path %></h3>
